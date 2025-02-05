@@ -1,0 +1,89 @@
+cleaning:
+  workflow_name: cleaning
+  workflow_description: Workflow for ordering a device cleaning.
+  select_device:
+    control_cabine:
+      type_name: control_cabine
+      type_description: Devices of Control Cabine type. More specifically, a control cabine can be a Stand, Bayed, Terminal box or Wall-mounted.
+      input_parameters:
+        control_cabine_type:
+          description: The specific type of control cabinet.
+          options:
+            - Stand: stand
+            - Bayed: bayed
+            - Terminal box: terminal_box
+            - Wall-mounted: wall_mounted
+        control_cabine_specification:
+          description: The specification for the control cabinet (e.g version, model, format, etc...).
+        device_location: 
+          description: The location of the device.
+          options:
+            - Smart Factory Duesseldorf: cf941b45c3010650417335af050131f1
+            - Hannover Messe Booth: db98d96493294610d8c5f5747aba104a
+        device_to_be_cleaned: 
+          description: The name of the device to be cleaned.
+          options:
+            - IP-Router-1: IP-Router-1
+            - Workstation: Workstation
+        pollution_description:
+          description: An explanation of the pollution on the device.
+        device_access:
+          description: Whether the device is freely accessible or not.
+          options:
+            - "Yes": "Yes"
+            - "No": "No"
+        access_contact:
+          description: The contact that has access to the device. Only required when device_access is "No".
+
+    cnc_machine:
+      type_name: cnc_machine
+      type_description: Devices of CNC Machine type. 
+      input_parameters:
+        cnc_machine_component: 
+          description: The component of the CNC machine to be cleaned.
+          options:
+            - Control panel: control_panel
+            - Table: table
+            - Frame: frame
+        device_location: 
+          description: The location of the device.
+          options:
+            - Smart Factory Duesseldorf: cf941b45c3010650417335af050131f1
+            - Hannover Messe Booth: db98d96493294610d8c5f5747aba104a
+        device_to_be_cleaned: 
+          description: The name of the device to be cleaned.
+          options:
+            - IP-Router-1: IP-Router-1
+        pollution_description:
+          description: An explanation of the pollution on the device.
+        device_access:
+          description: Whether the device is freely accessible or not.
+          options:
+            - "Yes": "Yes"
+            - "No": "No"
+        access_contact:
+          description: The contact that has access to the device. Only required when device_access is "No".
+
+    factory_pc:
+      type_name: factory_pc
+      type_description: Devices of Factory PC type. Can be a Macbook or an IP-Router
+      input_parameters:
+        device_location: 
+          description: The location of the device. Can only be one of the options.
+          options:
+            - Smart Factory Duesseldorf: cf941b45c3010650417335af050131f1
+            - Hannover Messe Booth: db98d96493294610d8c5f5747aba104a
+        device_to_be_cleaned: 
+          description: The name of the device to be cleaned.
+          options:
+            - IP-Router-1: IP-Router-1
+            - Macbook: Macbook
+        pollution_description:
+          description: An explanation of the pollution on the device.
+        device_access:
+          description: Whether the device is freely accessible or not. Can only be one of the options.
+          options:
+            - "Yes": "Yes"
+            - "No": "No"
+        access_contact:
+          description: The contact that has access to the device. Only required when device_access is "No".

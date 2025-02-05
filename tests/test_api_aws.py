@@ -1,0 +1,17 @@
+import requests
+import json
+
+url = "https://waittvpsf4.execute-api.eu-central-1.amazonaws.com/default/text-to-audio"
+
+payload = json.dumps({
+  "text": "texto a sser"
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer eyJraWQiOiJcLzFuXC9QVzdHTlZwYmhvRGRkd2xBcTJNY0xlUWc0K2d4UEFRME9tTkJOdms9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJraTU1dmszc3E4aTR2NjIyb3E0M2RzcGVjIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJzbm93LW52aWRpYS12b2ljZWJvdC1yc2lkXC9jYWxsX2xsbSIsImF1dGhfdGltZSI6MTcxMjc2MTc0NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tXC9ldS1jZW50cmFsLTFfM1IwbU9DYXJaIiwiZXhwIjoxNzEyNzY1MzQ3LCJpYXQiOjE3MTI3NjE3NDcsInZlcnNpb24iOjIsImp0aSI6IjdmOGU4NDNkLTI2ODItNGNkOS1hYjAzLTU2ZmE5NWMzN2IzNCIsImNsaWVudF9pZCI6ImtpNTV2azNzcThpNHY2MjJvcTQzZHNwZWMifQ.iRsvKKJZ11a-vQipvAZg3VFxh2HwphcuuqtoTgTS_RwV1RYq8EZnroSluQc9Fvw_F6z8tyyS20CGOGYJ8FPjJqgtitRcarE565XtX55nQZ3J_pUdvUpGA7ig5GQBph4Snxcnf7xrZRdWxZoHpYw_wrh1ukhohG8e85Gm-S7TqaZrgYYnojHy4417pzBWfWALVVacOf29d1W_JSbpfXlVbdjL_AX_cIKVEMCv5ZDp01-LzWatlNxE-lXv66Rb7tKreBuSdJnd2jcozT_nHOUlKxx2f4wxenMG5RuAYIstCsKiaBZdxy8kqb8otTOdMkQNPc3qGTVujFCpMbtKexBnlw'
+}
+
+response = requests.request("OPTIONS", url, headers=headers, data=payload)
+
+print(response.headers)
+print(response)

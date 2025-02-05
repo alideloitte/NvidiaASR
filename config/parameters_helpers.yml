@@ -1,0 +1,13 @@
+cleaning:
+  cleaning: Cleaning
+  control_cabine: Control Cabine
+  cnc_machine: CNC Machine
+  factory_pc: Factory PC
+  cnc_machine_component: CNC Machine Component
+  control_cabine_type: Control Cabine Type
+  control_cabine_specification: Control Cabine Specification
+  device_location: Device Location
+  device_to_be_cleaned: Device to be cleaned
+  pollution_description: Pollution Description
+  device_access: Device Access
+  access_contact: Access Contact
